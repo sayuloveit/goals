@@ -1,9 +1,10 @@
+Goals = new Mongo.Collection('goals');
+
 if (Meteor.isClient) {
   Template.body.helpers({
-    resolutions: [
-      { task: 'resolution 1'},
-      { task: 'resolution 2'}
-    ]
+    goals: function() {
+      return Goals.find();
+    }
   });
 }
 
