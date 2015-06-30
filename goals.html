@@ -3,11 +3,18 @@
 </head>
 
 <body>
-  <ul>
-    {{#each goals}}
-      {{> goal}}
-    {{/each}}
-  </ul>
+  <div class='container'>
+  <header>
+    <h1>Monthly Goals</h1>
+  </header>
+
+    <ul>
+      {{#each goals}}
+        {{> goal}}
+      {{/each}}
+    </ul>
+
+  </div>
 </body>
 
 <template name="goal">
