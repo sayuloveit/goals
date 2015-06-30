@@ -4,10 +4,12 @@
 
 <body>
   <ul>
-    {{> resolution}}
+    {{#each resolutions}}
+      {{> resolution}}
+    {{/each}}
   </ul>
 </body>
 
 <template name="resolution">
-  <li>test</li>
+  <li>{{task}}</li>
 </template>
