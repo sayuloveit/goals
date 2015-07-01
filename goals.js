@@ -23,7 +23,11 @@ if (Meteor.isClient) {
   Template.goal.events({
     'click .delete': function() {
       Goals.remove(this._id);
-    }
+    },
+
+    'click .toggle-check': function() {
+      Goals.update(this._id, {$set: {status: !this.status}})
+    },
   });
 
 }
