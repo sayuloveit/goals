@@ -6,6 +6,20 @@ if (Meteor.isClient) {
       return Goals.find();
     }
   });
+
+  Template.body.events({
+    'submit .new-goal': function(event) {
+      var desc = event.target.description.value;
+
+      Goals.insert({
+        description: desc,
+        createAt: new Date()
+      });
+      event.target.description.value = '';  // reset value
+      return false;                         //prevent page refresh
+    }
+  });
+
 }
 
 if (Meteor.isServer) {
