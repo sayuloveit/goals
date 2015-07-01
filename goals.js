@@ -16,7 +16,13 @@ if (Meteor.isClient) {
         createAt: new Date()
       });
       event.target.description.value = '';  // reset value
-      return false;                         //prevent page refresh
+      return false;                         // prevent page refresh
+    }
+  });
+
+  Template.goal.events({
+    'click .delete': function() {
+      Goals.remove(this._id);
     }
   });
 
