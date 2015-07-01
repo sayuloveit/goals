@@ -7,6 +7,11 @@
   <header>
     <h1>Monthly Goals</h1>
 
+    <label class="hide-completed">
+      <input type="checkbox" checked="{{hideCompleted}}">
+      Hide Completed Goals
+    </label>
+
     <form class="new-goal">
       <input type="text" name="description" placeholder="a new goal" maxlength="140">
       <input type="submit" value="Add">
