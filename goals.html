@@ -9,7 +9,7 @@
 
     <form class="new-goal">
       <input type="text" name="description" placeholder="a new goal">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Add">
     </form>
 
   </header>
@@ -24,8 +24,8 @@
 </body>
 
 <template name="goal">
-  <li>
-    <input type="checkbox" checked="{{complete}}" class="toggle-check">
+  <li class="{{#if status}}checked{{/if}}">
+    <input type="checkbox" checked="{{status}}" class="toggle-check">
     <span class="text">{{description}}</span>
     <button class="delete">Delete</button>
   </li>
