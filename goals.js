@@ -8,6 +8,11 @@ if (Meteor.isClient) {
       return Goals.find({status: {$ne: true}});
      }
      return Goals.find();
+    },
+
+    // keep state of checked in hide-complete input in sync
+    hideCompleted: function() {
+      return Session.get('hideCompleted')
     }
   });
 
@@ -26,7 +31,6 @@ if (Meteor.isClient) {
     'change .hide-completed': function(event) {
       // toggle session variable based on check
       Session.set('hideCompleted', event.target.checked);
-
     }
 
   });
