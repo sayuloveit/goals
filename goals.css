@@ -61,3 +61,14 @@ li {
   padding: 20px 15px;
   border-bottom: #eee solid 1px;
 }
+
+.delete {
+  float: right;
+  font-weight: bold;
+  background: #DE4F4F;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
+}
