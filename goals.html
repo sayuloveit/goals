@@ -25,7 +25,8 @@
 
 <template name="goal">
   <li>
-    {{description}}
+    <input type="checkbox" checked="{{complete}}" class="toggle-check">
+    <span class="text">{{description}}</span>
     <button class="delete">Delete</button>
   </li>
 </template>
